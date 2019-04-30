@@ -1,0 +1,26 @@
+<h3><a class="btn btn-secondary" href="/employee"><i class="fa fa-plus"></i> Ajouter </a> Les Livres</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Titre</th>
+            <th>Numéro</th>
+            <th>Quantité</th>
+            <th>Etagère</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.titre}}</td>
+            <td>{{this.numero}}</td>
+            <td>{{this.quantite}}</td>
+            <td>{{this.etagere}}</td>
+            <td>
+                <a href="/employee/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/employee/delete/{{this._id}}" onclick="return confirm('voulez-vous supprimer ce livre ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

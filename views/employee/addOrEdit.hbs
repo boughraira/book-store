@@ -1,0 +1,29 @@
+<h3>Ajouter Livre</h3>
+
+<form action="/employee" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{employee._id}}">
+    <div class="form-group">
+        <label>Titre :</label>
+        <input type="text" class="form-control" name="titre" placeholder="Titre" value="{{employee.titre}}">
+        
+    </div>
+    <div class="form-group">
+        <label>Numéro :</label>
+        <input type="number" class="form-control" name="numero" placeholder="Numéro " value="{{employee.numero}}">
+      
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Quantité :</label>
+            <input type="number" class="form-control" name="quantite" placeholder="Quantité " value="{{employee.quantite}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Etagère :</label>
+            <input type="text" class="form-control" name="etagere" placeholder="Etagère " value="{{employee.city}}">
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Ajouter</button>
+        <a class="btn btn-secondary" href="/employee/list"><i class="fa fa-list-alt"></i> Les Livres </a>
+    </div>
+</form>
